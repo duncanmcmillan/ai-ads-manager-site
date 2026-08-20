@@ -12,6 +12,7 @@ export default function NavBar() {
         </div>
 
         <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-600">
+          <a href="#screenshots" className="hover:text-gray-900 transition-colors">Screenshots</a>
           <a href="#features" className="hover:text-gray-900 transition-colors">Features</a>
           <a href="#pricing" className="hover:text-gray-900 transition-colors">Pricing</a>
         </nav>

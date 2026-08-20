@@ -29,7 +29,7 @@ export default function Screenshots() {
   const tab = TABS.find(t => t.key === active)!;
 
   return (
-    <section className="py-24 px-6 bg-gray-950">
+    <section id="screenshots" className="py-24 px-6 bg-gray-950">
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-12">
