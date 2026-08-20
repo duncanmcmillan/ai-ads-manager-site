@@ -23,8 +23,9 @@ const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={geist.className}>
-      <head>
-        {/* Meta Pixel — only injected when NEXT_PUBLIC_META_PIXEL_ID is set */}
+      <body className="bg-white text-gray-900 antialiased">
+        {children}
+        {/* Meta Pixel — Next.js Script handles placement; only injected when env var is set */}
         {PIXEL_ID && (
           <Script id="meta-pixel" strategy="afterInteractive">{`
             !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -36,8 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fbq('track','PageView');
           `}</Script>
         )}
-      </head>
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+      </body>
     </html>
   );
 }
