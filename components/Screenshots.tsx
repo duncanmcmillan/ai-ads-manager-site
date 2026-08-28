@@ -7,14 +7,26 @@ const TABS = [
   {
     key: 'campaign',
     label: 'AI Campaign Builder',
-    description: 'Describe your goal in plain English — AI generates the full campaign structure in seconds.',
+    description: 'Describe your goal in plain English — AI generates the full campaign structure, targeting, and copy in seconds.',
     src: '/screenshots/campaign.png',
   },
   {
-    key: 'monitoring',
-    label: 'Performance Monitoring',
-    description: 'Account-level summary cards and a sortable campaign breakdown table in one view.',
-    src: '/screenshots/monitoring.png',
+    key: 'fast-campaign',
+    label: 'AI Auto Mode',
+    description: 'One click, full campaign. AI Auto Mode fills every field from a single brief — review, tweak, and publish.',
+    src: '/screenshots/fast-campaign.png',
+  },
+  {
+    key: 'dashboard',
+    label: 'Dashboard & Charts',
+    description: 'Spend, CTR, CPC, and CPM visualised with timeline charts. Filter by date range and export to CSV in one click.',
+    src: '/screenshots/dashboard.png',
+  },
+  {
+    key: 'meta-setup',
+    label: 'Meta Setup Wizard',
+    description: 'Step-by-step setup with screenshots for every Meta configuration step — from Business Portfolio to Dataset.',
+    src: '/screenshots/meta-setup.png',
   },
   {
     key: 'optimisation',
