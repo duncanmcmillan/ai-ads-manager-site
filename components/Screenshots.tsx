@@ -139,7 +139,7 @@ function ScreenshotStack({ images }: { images: TabImage[] }) {
         <NavArrow dir="next" disabled={activeIdx === images.length - 1} onClick={next} />
 
         {/* Aspect-ratio box — overflow visible so staggered cards peek out */}
-        <div className="relative aspect-video" style={{ overflow: 'visible' }}>
+        <div className="relative aspect-[16/10]" style={{ overflow: 'visible' }}>
           {images.map((img, idx) => {
             const isActive = idx === activeIdx;
             const slot = nonActiveOrder.indexOf(idx);
@@ -164,7 +164,7 @@ function ScreenshotStack({ images }: { images: TabImage[] }) {
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover object-top"
+                  className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 900px"
                   draggable={false}
                 />
