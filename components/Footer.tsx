@@ -3,7 +3,8 @@ const RELEASES_URL = 'https://github.com/duncanmcmillan/ai-social-media-ads/rele
 const PLATFORMS = [
   {
     label: 'macOS',
-    sub: 'Apple Silicon',
+    sub: 'M1 / M2 / M3 / M4',
+    badge: 'Most Macs',
     href: RELEASES_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
@@ -13,7 +14,8 @@ const PLATFORMS = [
   },
   {
     label: 'macOS',
-    sub: 'Intel',
+    sub: 'Intel (pre-2021)',
+    badge: null,
     href: RELEASES_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
@@ -24,6 +26,7 @@ const PLATFORMS = [
   {
     label: 'Windows',
     sub: 'x64',
+    badge: null,
     href: RELEASES_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
@@ -34,6 +37,7 @@ const PLATFORMS = [
   {
     label: 'Linux',
     sub: 'deb / rpm',
+    badge: null,
     href: RELEASES_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
@@ -87,8 +91,13 @@ export default function Footer() {
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2.5 px-5 py-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 text-gray-300 transition-all text-sm"
+              className="relative flex items-center gap-2.5 px-5 py-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 text-gray-300 transition-all text-sm"
             >
+              {p.badge && (
+                <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded-full leading-none">
+                  {p.badge}
+                </span>
+              )}
               {p.icon}
               <span>
                 <span className="font-medium">{p.label}</span>
@@ -99,6 +108,11 @@ export default function Footer() {
         </div>
 
         <p className="mt-5 text-xs text-gray-600">
+          Not sure which Mac download?{' '}
+          <span className="text-gray-500">Apple menu &rarr; About This Mac &rarr; look for M1/M2/M3/M4 or Intel.</span>
+        </p>
+
+        <p className="mt-2 text-xs text-gray-600">
           All releases on{' '}
           <a
             href={RELEASES_URL}
@@ -108,11 +122,30 @@ export default function Footer() {
           >
             GitHub Releases
           </a>
+          {' '}&nbsp;&bull;&nbsp; macOS: right-click &rarr; Open on first launch &nbsp;&bull;&nbsp; Windows: More info &rarr; Run anyway
         </p>
+      </div>
 
-        <p className="mt-3 text-xs text-gray-700">
-          macOS: right-click &rarr; Open on first launch &nbsp;&bull;&nbsp; Windows: More info &rarr; Run anyway
-        </p>
+      {/* Contact / enquiry section */}
+      <div className="max-w-5xl mx-auto mt-10 pt-8 border-t border-white/5 text-center">
+        <p className="text-sm text-gray-400 mb-1">Have a question or want to know more?</p>
+        <p className="text-xs text-gray-600 mb-5">Drop your email and we&apos;ll get back to you.</p>
+        <form
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-sm mx-auto"
+          onSubmit={e => e.preventDefault()}
+        >
+          <input
+            type="email"
+            placeholder="you@example.com"
+            className="flex-1 w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-orange-500 transition-colors"
+          />
+          <a
+            href="mailto:hello@ai-social-media-ads.online"
+            className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors whitespace-nowrap text-center"
+          >
+            Get in touch
+          </a>
+        </form>
       </div>
 
     </footer>
