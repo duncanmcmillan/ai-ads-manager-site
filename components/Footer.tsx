@@ -122,8 +122,23 @@ export default function Footer() {
           >
             GitHub Releases
           </a>
-          {' '}&nbsp;&bull;&nbsp; macOS: right-click &rarr; Open on first launch &nbsp;&bull;&nbsp; Windows: More info &rarr; Run anyway
         </p>
+
+        {/* First-launch instructions */}
+        <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 text-left max-w-2xl mx-auto">
+          <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
+            <p className="text-xs font-medium text-gray-400 mb-1">macOS — first launch only</p>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              macOS will warn the app can&apos;t be verified. <strong className="text-gray-500">Right-click the app &rarr; Open &rarr; Open</strong> to approve it. Alternatively go to <strong className="text-gray-500">System Settings &rarr; Privacy &amp; Security &rarr; Open Anyway</strong>.
+            </p>
+          </div>
+          <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
+            <p className="text-xs font-medium text-gray-400 mb-1">Windows — first launch only</p>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              Windows SmartScreen may block the installer. Click <strong className="text-gray-500">More info &rarr; Run anyway</strong> to proceed. You only need to do this once.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Contact / enquiry section */}
