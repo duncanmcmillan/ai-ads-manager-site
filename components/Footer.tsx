@@ -79,8 +79,8 @@ export default function Footer() {
 
       {/* Download section */}
       <div className="max-w-5xl mx-auto mt-10 pt-8 border-t border-white/5 text-center">
-        <p className="text-sm text-gray-400 mb-2">Free to download. No subscription required to try it.</p>
-        <p className="text-xs text-gray-600 mb-6">
+        <p className="text-sm text-gray-300 mb-2">Free to download. No subscription required to try it.</p>
+        <p className="text-xs text-gray-500 mb-6">
           Native desktop app for macOS, Windows, and Linux &mdash; no browser, no cloud sync.
         </p>
 
@@ -107,18 +107,18 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="mt-5 text-xs text-gray-600">
+        <p className="mt-5 text-xs text-gray-500">
           Not sure which Mac download?{' '}
-          <span className="text-gray-500">Apple menu &rarr; About This Mac &rarr; look for M1/M2/M3/M4 or Intel.</span>
+          <span className="text-gray-400">Apple menu &rarr; About This Mac &rarr; look for M1/M2/M3/M4 or Intel.</span>
         </p>
 
-        <p className="mt-2 text-xs text-gray-600">
+        <p className="mt-2 text-xs text-gray-500">
           All releases on{' '}
           <a
             href={RELEASES_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-300 underline underline-offset-2 transition-colors"
+            className="text-gray-400 hover:text-gray-200 underline underline-offset-2 transition-colors"
           >
             GitHub Releases
           </a>
@@ -127,15 +127,15 @@ export default function Footer() {
         {/* First-launch instructions */}
         <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 text-left max-w-2xl mx-auto">
           <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
-            <p className="text-xs font-medium text-gray-400 mb-1">macOS — first launch only</p>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              macOS will warn the app can&apos;t be verified. <strong className="text-gray-500">Right-click the app &rarr; Open &rarr; Open</strong> to approve it. Alternatively go to <strong className="text-gray-500">System Settings &rarr; Privacy &amp; Security &rarr; Open Anyway</strong>.
+            <p className="text-xs font-medium text-gray-300 mb-1">macOS — first launch only</p>
+            <p className="text-xs text-gray-500 leading-relaxed">
+              macOS will warn the app can&apos;t be verified. <strong className="text-gray-300">Right-click the app &rarr; Open &rarr; Open</strong> to approve it. Alternatively go to <strong className="text-gray-300">System Settings &rarr; Privacy &amp; Security &rarr; Open Anyway</strong>.
             </p>
           </div>
           <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
-            <p className="text-xs font-medium text-gray-400 mb-1">Windows — first launch only</p>
-            <p className="text-xs text-gray-600 leading-relaxed">
-              Windows SmartScreen may block the installer. Click <strong className="text-gray-500">More info &rarr; Run anyway</strong> to proceed. You only need to do this once.
+            <p className="text-xs font-medium text-gray-300 mb-1">Windows — first launch only</p>
+            <p className="text-xs text-gray-500 leading-relaxed">
+              Windows SmartScreen may block the installer. Click <strong className="text-gray-300">More info &rarr; Run anyway</strong> to proceed. You only need to do this once.
             </p>
           </div>
         </div>
@@ -143,8 +143,8 @@ export default function Footer() {
 
       {/* Contact / enquiry section */}
       <div className="max-w-5xl mx-auto mt-10 pt-8 border-t border-white/5 text-center">
-        <p className="text-sm text-gray-400 mb-1">Have a question or want to know more?</p>
-        <p className="text-xs text-gray-600 mb-5">Drop your email and we&apos;ll get back to you.</p>
+        <p className="text-sm text-gray-300 mb-1">Have a question or want to know more?</p>
+        <p className="text-xs text-gray-500 mb-5">Drop your email and we&apos;ll get back to you.</p>
         <form className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-sm mx-auto">
           <input
             type="email"
