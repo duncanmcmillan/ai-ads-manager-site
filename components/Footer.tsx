@@ -145,10 +145,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto mt-10 pt-8 border-t border-white/5 text-center">
         <p className="text-sm text-gray-400 mb-1">Have a question or want to know more?</p>
         <p className="text-xs text-gray-600 mb-5">Drop your email and we&apos;ll get back to you.</p>
-        <form
-          className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-sm mx-auto"
-          onSubmit={e => e.preventDefault()}
-        >
+        <form className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-sm mx-auto">
           <input
             type="email"
             placeholder="you@example.com"
