@@ -1,22 +1,13 @@
+import { DOWNLOADS } from '../lib/downloads';
+
 const RELEASES_URL = 'https://github.com/duncanmcmillan/ai-social-media-ads/releases/latest';
 
 const PLATFORMS = [
   {
     label: 'macOS',
-    sub: 'M1 / M2 / M3 / M4',
+    sub: 'Apple Silicon (M1–M4)',
     badge: 'Most Macs',
-    href: RELEASES_URL,
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'macOS',
-    sub: 'Intel (pre-2021)',
-    badge: null,
-    href: RELEASES_URL,
+    href: DOWNLOADS.mac,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -27,7 +18,7 @@ const PLATFORMS = [
     label: 'Windows',
     sub: 'x64',
     badge: null,
-    href: RELEASES_URL,
+    href: DOWNLOADS.win,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
         <path d="M3 12V6.75l6-1.32v6.57H3zm17 0V5.5l-9 1.98V12h9zm0 .5l-9 .2v5.52L20 19.5V12.5zM3 12.5v5.23l6 .84v-6.07H3z"/>
@@ -36,9 +27,9 @@ const PLATFORMS = [
   },
   {
     label: 'Linux',
-    sub: 'deb / rpm',
+    sub: '.deb (Ubuntu/Debian)',
     badge: null,
-    href: RELEASES_URL,
+    href: DOWNLOADS.linuxDeb,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
         <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 2c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8zm-1 3v6l5 3-.87-1.5L14 13V7h-3z"/>
@@ -89,8 +80,6 @@ export default function Footer() {
             <a
               key={`${p.label}-${p.sub}`}
               href={p.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="relative flex items-center gap-2.5 px-5 py-2.5 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 text-gray-300 transition-all text-sm"
             >
               {p.badge && (
@@ -108,8 +97,10 @@ export default function Footer() {
         </div>
 
         <p className="mt-5 text-xs text-gray-500">
-          Not sure which Mac download?{' '}
-          <span className="text-gray-400">Apple menu &rarr; About This Mac &rarr; look for M1/M2/M3/M4 or Intel.</span>
+          Linux RPM also available &mdash;{' '}
+          <a href={DOWNLOADS.linuxRpm} className="text-gray-400 hover:text-gray-200 underline underline-offset-2 transition-colors">.rpm download</a>
+          {' '}&nbsp;&middot;&nbsp;{' '}
+          Intel Mac support coming soon.
         </p>
 
         <p className="mt-2 text-xs text-gray-500">

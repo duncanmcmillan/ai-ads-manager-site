@@ -1,3 +1,5 @@
+import DownloadButton from './DownloadButton';
+
 export default function NavBar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-200">
@@ -17,12 +19,9 @@ export default function NavBar() {
           <a href="#pricing" className="hover:text-gray-900 transition-colors">Pricing</a>
         </nav>
 
-        <a
-          href="#download"
-          className="text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg transition-colors"
-        >
+        <DownloadButton className="text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg transition-colors cursor-pointer">
           Download Free
-        </a>
+        </DownloadButton>
       </div>
     </header>
   );

@@ -1,3 +1,5 @@
+import DownloadButton from './DownloadButton';
+
 const FREE_FEATURES = [
   'Campaign, Ad Set & Ad builder',
   'Ad creative management',
@@ -66,12 +68,9 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <a
-              href="#download"
-              className="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 rounded-xl transition-colors text-sm"
-            >
+            <DownloadButton className="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 rounded-xl transition-colors text-sm cursor-pointer">
               Download Free
-            </a>
+            </DownloadButton>
           </div>
 
           {/* Pro */}

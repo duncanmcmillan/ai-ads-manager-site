@@ -1,27 +1,8 @@
 'use client';
 
-import { useCallback } from 'react';
-
-async function trackDownload() {
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Lead', { content_name: 'download_cta' });
-  }
-  try {
-    await fetch('/api/capi', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ event_name: 'Lead', event_source_url: window.location.href }),
-    });
-  } catch { /* best-effort */ }
-}
+import DownloadButton from './DownloadButton';
 
 export default function Hero() {
-  const handleDownload = useCallback(async () => {
-    await trackDownload();
-    // TODO: replace with GitHub Releases URL when installer is published
-    window.location.href = '#download';
-  }, []);
-
   return (
     <section className="pt-40 pb-28 px-6 bg-gray-950 text-white">
       <div className="max-w-3xl mx-auto text-center">
@@ -42,12 +23,9 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
-          <button
-            onClick={handleDownload}
-            className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base"
-          >
+          <DownloadButton className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base cursor-pointer">
             Download Free
-          </button>
+          </DownloadButton>
           <a
             href="#features"
             className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium px-8 py-3.5 rounded-xl transition-colors text-base text-center"
