@@ -1,7 +1,7 @@
 import DownloadButton from './DownloadButton';
 
 const FREE_FEATURES = [
-  'Campaign, Ad Set & Ad builder',
+  'Campaign, Ad Set & Ad builder — up to 3 campaigns',
   'Ad creative management',
   'Performance monitoring — last 7 days',
   'Local encrypted storage',
@@ -10,6 +10,7 @@ const FREE_FEATURES = [
 
 const PRO_FEATURES = [
   'Everything in Free',
+  'Unlimited campaigns',
   'AI brief → campaign generation',
   'Ad optimisation with verdict scoring',
   'Full monitoring — all date ranges',
