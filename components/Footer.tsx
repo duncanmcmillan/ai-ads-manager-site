@@ -120,7 +120,7 @@ export default function Footer() {
           <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
             <p className="text-xs font-medium text-gray-300 mb-1">macOS — first launch only</p>
             <p className="text-xs text-gray-500 leading-relaxed">
-              macOS will warn the app can&apos;t be verified. <strong className="text-gray-300">Right-click the app &rarr; Open &rarr; Open</strong> to approve it. Alternatively go to <strong className="text-gray-300">System Settings &rarr; Privacy &amp; Security &rarr; Open Anyway</strong>.
+              macOS will warn the app can&apos;t be verified. Go to <strong className="text-gray-300">System Settings &rarr; Privacy &amp; Security &rarr; Open Anyway</strong>. You only need to do this once.
             </p>
           </div>
           <div className="flex-1 bg-white/[0.03] border border-white/8 rounded-lg px-4 py-3">
