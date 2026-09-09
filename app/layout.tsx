@@ -52,6 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         {/* End Meta Pixel Code */}
+        {/* Paddle.js — checkout overlay */}
+        <Script src="https://cdn.paddle.com/paddle/v2/paddle.js" strategy="afterInteractive" />
       </head>
       <body className="bg-white text-gray-900 antialiased">
         {children}

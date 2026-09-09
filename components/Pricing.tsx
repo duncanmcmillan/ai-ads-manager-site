@@ -99,8 +99,7 @@ export default function Pricing() {
               ))}
             </ul>
 
-            {/* TODO: replace href with live LemonSqueezy product checkout URL */}
-            <ProCheckoutButton href="https://aiads.lemonsqueezy.com" />
+            <ProCheckoutButton />
           </div>
 
         </div>
