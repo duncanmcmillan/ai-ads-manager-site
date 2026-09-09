@@ -1,4 +1,5 @@
 import { DOWNLOADS } from '../lib/downloads';
+import EmailSignupForm from './EmailSignupForm';
 
 const RELEASES_URL = 'https://github.com/duncanmcmillan/ai-social-media-ads/releases/latest';
 
@@ -136,19 +137,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto mt-10 pt-8 border-t border-white/5 text-center">
         <p className="text-sm text-gray-300 mb-1">Have a question or want to know more?</p>
         <p className="text-xs text-gray-500 mb-5">Drop your email and we&apos;ll get back to you.</p>
-        <form className="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-sm mx-auto">
-          <input
-            type="email"
-            placeholder="you@example.com"
-            className="flex-1 w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-orange-500 transition-colors"
-          />
-          <a
-            href="mailto:hello@ai-social-media-ads.online"
-            className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors whitespace-nowrap text-center"
-          >
-            Get in touch
-          </a>
-        </form>
+        <EmailSignupForm />
       </div>
 
     </footer>

@@ -10,7 +10,8 @@ function sha256(value: string): string {
  * Forwards a browser event to the Meta Conversions API (server-side).
  * Must be paired with the client-side Pixel for deduplication.
  *
- * Body: { event_name, event_source_url, user_data? }
+ * Body: { event_name, event_id?, event_source_url?, user_data?, custom_data? }
+ * event_id must match the eventID passed to fbq() to enable deduplication.
  * user_data fields (email, phone) are hashed before transmission.
  */
 export async function POST(request: Request) {
@@ -24,8 +25,10 @@ export async function POST(request: Request) {
 
   const body = await request.json() as {
     event_name: string;
+    event_id?: string;
     event_source_url?: string;
     user_data?: { email?: string; phone?: string };
+    custom_data?: Record<string, unknown>;
   };
 
   const ip          = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '';
@@ -43,10 +46,12 @@ export async function POST(request: Request) {
   const payload = {
     data: [{
       event_name:        body.event_name,
+      ...(body.event_id ? { event_id: body.event_id } : {}),
       event_time:        eventTime,
       event_source_url:  body.event_source_url ?? '',
       action_source:     'website',
       user_data:         hashedUserData,
+      ...(body.custom_data ? { custom_data: body.custom_data } : {}),
     }],
   };
 

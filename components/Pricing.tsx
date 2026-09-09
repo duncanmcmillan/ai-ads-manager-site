@@ -1,4 +1,5 @@
 import DownloadButton from './DownloadButton';
+import ProCheckoutButton from './ProCheckoutButton';
 
 const FREE_FEATURES = [
   'Campaign, Ad Set & Ad builder — up to 3 campaigns',
@@ -98,15 +99,8 @@ export default function Pricing() {
               ))}
             </ul>
 
-            {/* TODO: replace with live LemonSqueezy checkout URL */}
-            <a
-              href="https://aiads.lemonsqueezy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
-            >
-              Get Pro — £40/yr
-            </a>
+            {/* TODO: replace href with live LemonSqueezy product checkout URL */}
+            <ProCheckoutButton href="https://aiads.lemonsqueezy.com" />
           </div>
 
         </div>

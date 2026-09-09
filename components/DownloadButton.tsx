@@ -4,14 +4,20 @@ import { useCallback } from 'react';
 import { detectedDownloadUrl } from '../lib/downloads';
 
 async function trackDownload() {
+  const eventId = crypto.randomUUID();
   if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Lead', { content_name: 'download_cta' });
+    (window as any).fbq('track', 'Lead', { content_name: 'free_download' }, { eventID: eventId });
   }
   try {
     await fetch('/api/capi', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ event_name: 'Lead', event_source_url: window.location.href }),
+      body: JSON.stringify({
+        event_name: 'Lead',
+        event_id: eventId,
+        event_source_url: window.location.href,
+        custom_data: { content_name: 'free_download' },
+      }),
     });
   } catch { /* best-effort */ }
 }
