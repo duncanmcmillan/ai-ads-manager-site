@@ -6,15 +6,21 @@ import './globals.css';
 const geist = Geist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ai-social-media-ads.online'),
   title: 'AI Ads Manager — Facebook Ads, Powered by AI',
   description:
     'Build Facebook campaigns in minutes with AI. Monitor performance, optimise creatives, and manage your ad account — all in one desktop app for freelancers and small teams.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/logo-180.png',
+  },
   openGraph: {
     title: 'AI Ads Manager',
     description: 'Facebook Ads, Powered by AI',
     url: 'https://ai-social-media-ads.online',
     siteName: 'AI Ads Manager',
     type: 'website',
+    images: [{ url: '/logo-512.png', width: 512, height: 512 }],
   },
 };
 
