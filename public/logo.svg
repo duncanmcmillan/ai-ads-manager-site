@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Royal Purple to Midnight Blue -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e0b36" />
+      <stop offset="100%" stop-color="#0b061f" />
+    </linearGradient>
+
+    <!-- App Icon Border Glow: Electric Blue to Deep Purple -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Monogram 'A' Gradient: Vibrant Electric Blue to Royal Purple -->
+    <linearGradient id="monogramGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052ff" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+
+    <!-- Automation Arrow Gradient: High-Energy Neon Tech Green -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff87" />
+      <stop offset="100%" stop-color="#60efff" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow for Desktop App Realism -->
+    <filter id="appShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Glow Effect for the Neon Arrow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Main App Desktop Badge -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bgGrad)" filter="url(#appShadow)" />
+
+  <!-- Outer Border Stroke for Premium App Finish -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="none" stroke="url(#borderGrad)" stroke-width="3" />
+
+  <!-- The Core Design Group (Centered) -->
+  <g transform="translate(256, 246)">
+    <!-- Abstract Tech 'A' Monogram Structure -->
+    <!-- Left Leg / Pillar -->
+    <path d="M-90,110 L-40,-70 L-5,-70 L-45,110 Z" fill="url(#monogramGrad)" opacity="0.85" />
+
+    <!-- Right Leg / Pillar -->
+    <path d="M45,110 L5,-70 L40,-70 L90,110 Z" fill="url(#monogramGrad)" />
+
+    <!-- Apex / Cap Connection -->
+    <path d="M-40,-70 L0,-110 L40,-70 Z" fill="url(#monogramGrad)" />
+
+    <!-- Neon Green Fast-Forward Automation Arrow (Bridging the Crossbar) -->
+    <!-- Soft Glow Layer Underlying -->
+    <path d="M-80,40 L-10,40 L-40,10 L30,55 L-40,100 L-10,70 L-80,70 Z" fill="#00ff87" opacity="0.3" filter="url(#neonGlow)"/>
+
+    <!-- Sharp Foreground Arrow Layer -->
+    <path d="M-80,40 L-10,40 L-40,10 L30,55 L-40,100 L-10,70 L-80,70 Z" fill="url(#arrowGrad)" />
+
+    <!-- Secondary Stacked Precision Indicator (Forward Acceleration) -->
+    <path d="M45,35 L80,55 L45,75 L55,55 Z" fill="url(#arrowGrad)" filter="url(#neonGlow)" />
+  </g>
+
+  <!-- Minimalist Typography Embedded below the icon mark -->
+  <text x="256" y="435" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="4">
+    AI<tspan font-weight="300" fill="#00d2ff">-ADS</tspan>
+  </text>
+</svg>

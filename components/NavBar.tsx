@@ -5,12 +5,10 @@ export default function NavBar() {
     <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-md bg-orange-500 flex items-center justify-center">
-            <svg viewBox="0 0 16 16" fill="white" width="14" height="14" aria-hidden="true">
-              <path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9l2.5 2.5L14 9l-2.5-2.5z"/>
-            </svg>
-          </div>
-          <span className="font-semibold text-gray-900 text-sm">AI Ads Manager</span>
+          <img src="/logo.svg" alt="" width={36} height={36} aria-hidden="true" />
+          <span className="font-semibold text-gray-900 text-sm">
+            AI<span className="font-light text-cyan-500">-ADS</span>
+          </span>
         </div>
 
         <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-600">
