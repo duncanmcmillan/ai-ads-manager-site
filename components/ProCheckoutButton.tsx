@@ -44,8 +44,8 @@ export default function ProCheckoutButton() {
 
   function handleClick() {
     const paddle = window.Paddle;
-    const clientToken = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN ?? '';
-    const priceId     = process.env.NEXT_PUBLIC_PADDLE_PRICE_ID ?? '';
+    const clientToken = 'live_3bd2a4e9a5f866b104638b600da';
+    const priceId     = 'pri_01m23ne6g3v1q0w38xf23rkrwx';
 
     if (!paddle || !clientToken || !priceId) {
       // Paddle.js not yet loaded or env vars missing — open billing portal as fallback.
